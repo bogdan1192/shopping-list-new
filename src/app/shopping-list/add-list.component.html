@@ -1,0 +1,12 @@
+<h2 style="padding-left: 18px;"> Add List</h2>
+<div class="col-md-6">
+    <form #newList="ngForm" (ngSubmit)="addList(newList.value)" autocomplete="off" novalidate>
+        <div class="form-group">
+            <label for="name">List Name:</label>
+            <em *ngIf="newList.controls.name?.invalid && (newList.controls.name?.touched)">Required</em>
+            <input (ngModel)="newList.name" name="name" id="name" type="text" class="form-control" placeholder="List Name..." required />
+        </div>
+        <button type="submit" [disabled]="newList.invalid" class="button addButton">Save</button>
+        <button type="cancel" class="button cancelButton" (click)="cancel()">Cancel</button>
+    </form>
+</div>

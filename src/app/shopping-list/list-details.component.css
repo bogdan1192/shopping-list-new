@@ -1,0 +1,30 @@
+.editButton {
+    float:right;
+    margin-top: 20px;
+}
+
+.backButton:hover {
+    background-color: rgb(3, 77, 40);
+}
+
+.backButton {
+    background-color: rgb(7, 121, 73);
+    border-radius: 8px;
+    margin-left: 5px;
+    width: 100px;
+    margin-top: 10px;
+}
+
+.addButton:hover {
+  background-color: rgb(3, 77, 40);
+}
+
+.addButton {
+  background-color: rgb(7, 121, 73);
+  border-radius: 8px;
+  margin-left: 5px;
+  width: 100px;
+  margin-top: 10px;
+}
+
+  

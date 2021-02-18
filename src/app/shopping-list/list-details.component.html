@@ -1,0 +1,22 @@
+<div style="padding-left: 10px; padding-right: 10px;">
+    <h2 style="padding-left: 7px; display: inline;">{{list?.name}}: </h2>  
+    <span style="float: right; padding-right: 15px;">{{list.numberOfProductsAlreadyBought}}/{{list.totalNumberOfProducts}}</span>
+    <div style="background-color: rgb(7, 121, 73); border-radius: 25px; margin-top: 10px;">
+        <div class="row" *ngFor="let product of list.products" style="margin-left: 10px;">
+            <div class="col-md-6" style="width: 98%;"> 
+                <div style="display: inline-block;">
+                    <input type="checkbox" name="checkbox" [checked]="product.alreadyBought" (change)="checkValue(product)">
+                    <label style="margin-left: 3px;" for="checkbox"><h3>{{product.name}}</h3></label><br>
+                </div>
+                <button class="editButton" [routerLink]="['/product', product.id]"><i class="glyphicon glyphicon-pencil" style="color: black;" ></i></button>
+                <hr style="border-top: 1px dashed black;"/>
+            </div>
+        </div>
+    </div>
+    <div style="text-align: center;">
+        <h4>
+            <button type="button" class="button addButton" (click)="addProduct()">Add</button>
+            <button class="button backButton" (click)="homePage()">Back</button>
+        </h4>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+.addButton:hover {
+    background-color: rgb(3, 77, 40);
+  }
+
+.addButton {
+    background-color: rgb(7, 121, 73);
+    border-radius: 8px;
+}
+
+.deleteButton {
+    float:right;
+}

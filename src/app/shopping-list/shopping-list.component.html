@@ -1,0 +1,23 @@
+<div>
+    <div *ngFor="let list of lists" class="col-md-10" style="width: 100%;">
+        <div class="well" style="background-color: rgb(7, 121, 73); border-radius: 25px;" [routerLink]="['/list', list.id]">
+            <div style="height: 100px;">
+                <h2 style="display: inline;">
+                    {{list.name}}
+                </h2>
+                <span style="float: right;">{{list.numberOfProductsAlreadyBought}}/{{list.totalNumberOfProducts}}</span>
+                
+                <hr />
+                <button class="deleteButton"><i class="glyphicon glyphicon-remove" style="color: black;" (click)=deleteList(list.id) [routerLink]="['/list']"></i></button>
+            </div>
+        </div>
+    </div>
+    <div style="text-align: center;">
+        <button (click)="addNewList()" class="button addButton">
+            <h4>
+                <i class="glyphicon glyphicon-plus" style="color:black;" ></i>
+                Add List
+            </h4>
+        </button>
+    </div>
+</div>
